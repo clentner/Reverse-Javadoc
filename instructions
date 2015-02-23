@@ -1,0 +1,4 @@
+Run ClassFinder.py
+mkdir files && cd files && wget http://www.cs.rit.edu/~csci142/Projects/01/doc/perp/machine/stu/Machine.{Add,Divide,Instruction,Load,Multiply,Negate,Print,PushConst,SquareRoot,Store,Subtract}.html
+run ReverseDoc.py
+cat Machine.{Add,Divide,Instruction,Load,Multiply,Negate,Print,PushConst,SquareRoot,Store,Subtract}.java >> ../src/perp/machine/stu/Machine.java

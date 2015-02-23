@@ -107,7 +107,7 @@ def parameter_print(parameters_in):
 
     if parameters_out:
         return "\n" + parameters_out[:len(parameters_out) - 1]  # starts a new line for the first parameter to print
-                                                                # removes last new line so cursor is at end of last line
+        # removes last new line so cursor is at end of last line
     else:
         return ""
 
@@ -176,15 +176,17 @@ def ReverseDoc(html, location):
     return my_class
 
 
-def main(htmlfile=''):
-    htmlfile = input("Enter file name with path: ")
+def main(htmlfile='', interface=''):
+    # htmlfile = input("Enter file name with path: ")
     # htmlfile = "/home/andrew/Documents/AJ-College/Spring2015/CS142/1Perp/Project1/files/Machine.Add.html"
-    interface = input("Is this an interface? (y/n) ")
+    # interface = input("Is this an interface? (y/n) ")
     # interface = "Y"
-    if interface.upper() == "YES" or "Y":
+    print(interface)
+    if interface.upper() == "YES" or interface.upper == "Y":
         interface = True
     else:
         interface = False
+    print(interface)
     with open(htmlfile) as f:
         htmltext = f.read()
     java = ReverseDoc(htmltext, htmlfile)
@@ -193,4 +195,7 @@ def main(htmlfile=''):
 
 
 if __name__ == '__main__':
-    main()
+    files = ["Divide", "Load", "Multiply", "Negate", "Print", "PushConst", "SquareRoot", "Subtract"]
+    path = input("Path to project dir: ")
+    for file in files:
+        main(path +"files/Machine." + file + ".html", "N")
